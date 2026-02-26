@@ -1,5 +1,5 @@
 const Header = () => {
-  return <header><h1>My ToDoList: конфлікт вирішено </h1></header>;
 
+  return <header><h1>Версія для конфліку 1 </h1></header>;
 };
 export default Header;
