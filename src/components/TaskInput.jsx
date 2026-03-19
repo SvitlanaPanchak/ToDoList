@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 
 const TaskInput = ({addTask}) => {
     const [task, setTask]= useState('');
 
 
-    console.log(task);
+    //console.log(task);
     function handleInputValue(event){
         setTask(event.target.value);
     }
