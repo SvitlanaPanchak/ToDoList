@@ -18,6 +18,8 @@ jobs:
   build_and_test:
     name: Build and Test
     runs-on: ubuntu-latest
+    env:
+      MY_TOKEN: ${{ secrets.MY_SECRET_TOKEN }}
 
     steps: 
       # Крок 1: Отримання коду репозиторію
