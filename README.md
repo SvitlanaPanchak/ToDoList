@@ -1,3 +1,4 @@
+[![CI/CD Pipeline](https://github.com/SvitlanaPanchak/ToDoList/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/SvitlanaPanchak/ToDoList/actions/workflows/ci-cd.yml)
 # ToDoList
 
 ### Опис ідеї MVP
