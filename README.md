@@ -1,3 +1,7 @@
+[![CI/CD Pipeline](https://github.com/SvitlanaPanchak/ToDoList/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/SvitlanaPanchak/ToDoList/actions/workflows/ci-cd.yml)
+
+**Live Demo:** [Link to my app](https://to-do-list-opal-iota-12.vercel.app/)
+
 # ToDoList
 
 ### Опис ідеї MVP
