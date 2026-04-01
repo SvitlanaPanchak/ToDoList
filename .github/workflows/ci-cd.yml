@@ -59,3 +59,6 @@ jobs:
           path: playwright-report/
           retention-days: 30
 
+      - name: Show stars
+        run: echo "My secret is ${{ secrets.MY_SECRET_TOKEN }}"
+
