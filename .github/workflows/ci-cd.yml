@@ -1,0 +1,59 @@
+name: CI/CD Pipeline
+
+on:
+  # Запуск при push у гілки 
+  push:
+    branches:
+      - main
+      - develop
+
+  #Запуск при створенні Pull_request
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  # Jop для збірки та тестування
+  build_and_test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+
+    steps: 
+      # Крок 1: Отримання коду репозиторію
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Крок 2: Налаштування Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+
+      # Крок 3: Встановлення залежностей
+      - name: Install dependencies
+        run: npm install
+
+      # Крок 4: Встановлення браузерів для Playwright (оскільки вони потрібні для тестів)
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      # Крок 5: Запуск лінтера (перевірка якості коду)
+      - name: Run ESLint
+        run: npm run lint
+      
+      # Крок 6: Запуск юніт-тестів (Vitest / Jest)
+      - name: Run Unit tests
+        run: npm test
+
+      # Крок 7: Запуск тестів
+      - name: Run Playwright tests
+        run: npm run test:e2e
+
+      # Крок 8: Збереження звіту про тести (щоб можна було подивитися помилки)
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
+

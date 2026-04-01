@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 import {MdDeleteSweep} from 'react-icons/md';
 
 const TaskItem = ({task, deletTask, toggleCheck}) => {

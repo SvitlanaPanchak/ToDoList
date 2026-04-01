@@ -31,6 +31,7 @@ function App() {
     <>
       <div className="container">
         <h1>Task Master</h1>
+        <p>{import.meta.env.VITE_APP_STATUS}</p>
 
         <TaskInput addTask={addTask}/>
 
