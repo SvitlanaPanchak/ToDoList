@@ -46,7 +46,7 @@ jobs:
 
       # Крок 7: Запуск тестів
       - name: Run Playwright tests
-        run: npx playwright test
+        run: npm run test:e2e
 
       # Крок 8: Збереження звіту про тести (щоб можна було подивитися помилки)
       - name: Upload Playwright report
