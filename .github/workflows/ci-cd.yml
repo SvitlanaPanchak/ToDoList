@@ -1,17 +1,17 @@
-name:CI/CD Pipeline
+name: CI/CD Pipeline
 
 on:
   # Запуск при push у гілки 
   push:
     branches:
-      -main
-      -develop
+      - main
+      - develop
 
   #Запуск при створенні Pull_request
   pull_request:
     branches:
-      -main
-      -develop
+      - main
+      - develop
 
 jobs:
   # Jop для збірки та тестування
@@ -21,12 +21,12 @@ jobs:
 
     steps: 
       # Крок 1: Отримання коду репозиторію
-      -name: Checkout repository
-       uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       # Крок 2: Налаштування Node.js
-      -name: Setup Node.js
-       uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
 
       # Крок 3: Встановлення залежностей
       - name: Install dependencies
